@@ -15,8 +15,7 @@ import {
   Menu, 
   X,
   ChevronDown,
-  Send,
-  Download
+  Send
 } from 'lucide-react';
 
 const Portfolio = () => {
@@ -62,8 +61,9 @@ const Portfolio = () => {
     phone: "0757983152",
     location: "No-27 St.annes road, Palagathura, Kochchikade",
     linkedin: "https://www.linkedin.com/in/deneth-perera-687575256t",
-    github: "https://github.com/VinthagePerera", // Inferred from project links
-    summary: "I am a dedicated and enthusiastic undergraduate Software Engineering student with a strong foundation in programming, problem-solving, and software development principles. I have a keen interest in building efficient, user-friendly applications and continuously improving my technical skills."
+    github: "https://github.com/VinthagePerera",
+    // UPDATED: Changed from student to graduate
+    summary: "I am a dedicated and enthusiastic Software Engineering Graduate with a strong foundation in programming, problem-solving, and software development principles. I have a keen interest in building efficient, user-friendly applications and continuously improving my technical skills."
   };
 
   const skills = [
@@ -73,7 +73,24 @@ const Portfolio = () => {
     { category: "Tools & Concepts", items: ["Git", "Problem Solving", "Team Collaboration", "Cloudinary"] }
   ];
 
+  // UPDATED: Projects List
   const projects = [
+    {
+      title: "Choco-Luxe",
+      desc: "A modern web application offering a premium visual experience for a chocolate brand. Built to demonstrate high-fidelity UI implementation.",
+      tech: ["React", "Tailwind CSS", "JavaScript"],
+      link: "https://chocoluxe.vercel.app/",
+      github: "https://github.com/DenethPerera/chocoluxe.git",
+      type: "Web App"
+    },
+    {
+      title: "Nilanka Tours",
+      desc: "A comprehensive Personal Tour Guide Booking platform. Allows users to explore destinations and book personalized tour guides.",
+      tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+      link: "https://nilanka-tours.vercel.app/",
+      // No github link provided in prompt, logic handles this automatically
+      type: "Web App"
+    },
     {
       title: "RentMyRide",
       desc: "A comprehensive vehicle rental platform built with the MERN stack. Features user authentication, vehicle listings, and image management via Cloudinary.",
@@ -108,8 +125,9 @@ const Portfolio = () => {
     {
       degree: "Bachelor of Software Engineering",
       institution: "University of Plymouth",
-      period: "Sep 2022 - May 2025",
-      desc: "Undergraduate studies focusing on software development principles."
+      // UPDATED: Changed date to reflect graduation
+      period: "Graduated 2025",
+      desc: "Completed undergraduate studies focusing on software development principles."
     },
     {
       degree: "GCE Advanced Level",
@@ -495,7 +513,6 @@ const Portfolio = () => {
         </p>
       </footer>
 
-      {/* Styles for custom animations defined in CSS usually, but adding inline class logic here for completeness if needed, or relying on standard Tailwind */}
       <style jsx>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
